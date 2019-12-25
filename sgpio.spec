@@ -1,10 +1,10 @@
 Name:    sgpio
 Version: 1.2.1
-Release: 1
+Release: 2
 Summary: captive backplane LED control utility
 License: GPLv2+
 URL:     http://sources.redhat.com/lvm2/wiki/DMRAID_Eventing
-Source0: %{name}-%{version}.tgz
+Source0: https://www.sourceware.org/lvm2/wiki/DMRAID_Eventing?action=AttachFile&do=view&target=%{name}-%{version}.tgz
 
 BuildRequires: gcc, dos2unix
 
@@ -48,6 +48,8 @@ dos2unix README LICENSE_GPL
 %{_mandir}/man*/*
 
 %changelog
+* Fri Dec 20 2019 openEuler Buildteam <buildteam@openeuler.org> - 1.2.1-2
+- Modify the source0
+
 * Sat Aug 31 2019 openEuler Buildteam <buildteam@openeuler.org> - 1.2.1-1
 - Package init
-
