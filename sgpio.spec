@@ -1,6 +1,6 @@
 Name:    sgpio
 Version: 1.2.1
-Release: 2
+Release: 3
 Summary: captive backplane LED control utility
 License: GPLv2+
 URL:     http://sources.redhat.com/lvm2/wiki/DMRAID_Eventing
@@ -9,6 +9,7 @@ Source0: https://www.sourceware.org/lvm2/wiki/DMRAID_Eventing?action=AttachFile&
 BuildRequires: gcc, dos2unix
 
 Patch0: sgpio-makefile.patch
+Patch1: sgpio-fix-cc.patch
 
 %description
 Serial General Purpose Input Output (SGPIO) is a communication method used
@@ -48,6 +49,9 @@ dos2unix README LICENSE_GPL
 %{_mandir}/man*/*
 
 %changelog
+* Wed Apr 19 2023 Xiaoya Huang <huangxiaoya@iscas.ac.cn> - 1.2.1-3
+- Fix CC compiler support
+
 * Fri Dec 20 2019 openEuler Buildteam <buildteam@openeuler.org> - 1.2.1-2
 - Modify the source0
 

@@ -1,0 +1,20 @@
+--- a/Makefile	2023-04-19 19:05:01.000000000 +0800
++++ b/Makefile	2023-04-19 19:05:12.000000000 +0800
+@@ -26,14 +26,15 @@
+ SBINDIR = /sbin
+ INSTALL = /usr/bin/install
+ ALL = sgpio
++CC ?= gcc
+ 
+ all: $(ALL)
+ 
+ sgpio.o: sgpio.c
+-	gcc $(CFLAGS) -g -Wall -c sgpio.c
++	$(CC) $(CFLAGS) -g -Wall -c sgpio.c
+ 
+ sgpio: sgpio.o
+-	gcc $(LDFLAGS) -g sgpio.o -o sgpio
++	$(CC) $(LDFLAGS) -g sgpio.o -o sgpio
+ 
+ clean:
+ 	rm -f sgpio.o sgpio
